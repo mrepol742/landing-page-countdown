@@ -48,6 +48,8 @@
             transition: all 0.3s ease-in-out;
             margin: 0 auto;
             float: none;
+            margin: 5%;
+            border-radius: 35px;
         }
 
         small {
@@ -67,6 +69,38 @@
         i {
             font-size: 22px !important;
         }
+
+
+        #mobile {
+            display: block;
+        }
+
+        #desktop {
+            display: none;
+        }
+
+        .row {
+            padding: 0rem !important;
+        }
+
+        @media (min-width:770px) {
+
+            #mobile {
+                display: none;
+            }
+
+            #desktop {
+                display: block;
+            }
+
+            .row {
+                padding: 3rem;
+            }
+
+            .card {
+                margin: 8%;
+            }
+        }
     </style>
 
     <title>Website Name</title>
@@ -74,9 +108,15 @@
 
 <body>
 
-    <div class="card px-3 py-5 m-5">
-        <div class="card-body py-5">
-            <div class="row g-0 px-5 py-5">
+    <div class="card px-3 py-5">
+        <div class="card-body py-3">
+            <div class="row g-0">
+                <div class="col-md-5 py-3" id="mobile">
+                    <h1 class="card-title"><strong>Website is under construction</strong></h1>
+                    <p class="card-text sub-title mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
                 <div class="col-md-7 py-3">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 text-center">
                         <div class="col" id="day"></div>
@@ -93,7 +133,7 @@
                         <h6 class="mt-3">© Copyright 2024 Website Name</h6>
                     </div>
                 </div>
-                <div class="col-md-5 py-3">
+                <div class="col-md-5 py-3" id="desktop">
                     <h1 class="card-title mt-4"><strong>Website is under construction</strong></h1>
                     <p class="card-text sub-title mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -125,15 +165,15 @@
         var seconds = Math.floor((count % (1000 * 60)) / 1000);
 
         let _day = document.getElementById("day");
-        _day.innerHTML = "<h3>" + days + "</h3><br><small>Days</small>";
+        _day.innerHTML = "<h3>" + days + "</h3><small>Days</small>";
 
         let _hour = document.getElementById("hour");
-        _hour.innerHTML = "<h3>" + hours + "</h3><br><small>Hours</small>";
+        _hour.innerHTML = "<h3>" + hours + "</h3><small>Hours</small>";
 
         let _minute = document.getElementById("minute");
-        _minute.innerHTML = "<h3>" + minutes + "</h3><br><small>Minutes</small>";
+        _minute.innerHTML = "<h3>" + minutes + "</h3><small>Minutes</small>";
 
         let _second = document.getElementById("second");
-        _second.innerHTML = "<h3>" + seconds + "</h3><br><small>Seconds</small>";
+        _second.innerHTML = "<h3>" + seconds + "</h3><small>Seconds</small>";
     }, 1000);
 </script>

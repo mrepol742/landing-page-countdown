@@ -1,6 +1,8 @@
 # landing-page-countdown
 
 <img src="demo.png" />
+<img src="demo-port.png" width="200"/>
+<img src="demo-port.1.png"  width="200"/>
 
 ## Getting started
 - Fork the repository
